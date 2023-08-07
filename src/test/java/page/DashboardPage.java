@@ -27,16 +27,19 @@ public class DashboardPage {
         val value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
+
     public int getCardBalance(DataHelper.InfoCard infoCard) {
         var text = listCard.findBy(text(infoCard.getNumberCard().substring(15))).getText();
         return extractBalance(text);
     }
-    public int getCardBalance(int index){
+
+    public int getCardBalance(int index) {
         var text = listCard.get(index).getText();
         return extractBalance(text);
     }
+
     public TransferPage selectCardTotransfer(DataHelper.InfoCard infoCard) {
-        listCard.findBy(attribute("data-test-id",infoCard.getTestId())).$(".button").click();
+        listCard.findBy(attribute("data-test-id", infoCard.getTestId())).$(".button").click();
         return new TransferPage();
     }
 }

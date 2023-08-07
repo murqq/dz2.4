@@ -23,17 +23,18 @@ public class TransferPage {
         head.shouldBe(visible);
     }
 
-    public void makeTransfer(String transferredAmount, DataHelper.InfoCard infoCard){
+    public void makeTransfer(String transferredAmount, DataHelper.InfoCard infoCard) {
         amount.setValue(transferredAmount);
         from.setValue(infoCard.getNumberCard());
         transferButton.click();
     }
-    public DashboardPage validTransfer(String transferredAmount,DataHelper.InfoCard infoCard){
-        makeTransfer(transferredAmount,infoCard);
+
+    public DashboardPage validTransfer(String transferredAmount, DataHelper.InfoCard infoCard) {
+        makeTransfer(transferredAmount, infoCard);
         return new DashboardPage();
     }
 
-    public void  findError(String expectedText){
+    public void findError(String expectedText) {
         errorMessage.shouldHave(exactText(expectedText), Duration.ofSeconds(15)).shouldBe(visible);
     }
 }
