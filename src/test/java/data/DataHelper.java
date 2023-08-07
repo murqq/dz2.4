@@ -1,17 +1,8 @@
 package data;
 
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.specification.RequestSpecification;
 import lombok.Value;
 
-import static io.restassured.RestAssured.given;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-
-import io.restassured.http.ContentType;
 
 public class DataHelper {
 

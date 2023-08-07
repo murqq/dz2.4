@@ -1,20 +1,11 @@
+import data.DataHelper;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import page.DashboardPage;
 import page.LoginPage;
-import page.VerificationPage;
-import page.TransferPage;
-import data.DataHelper;
-
-import org.junit.jupiter.api.Test;
-
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Selenide.$;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-
-import com.codeborne.selenide.SelenideElement;
 
 public class TransferAmountToCardTest {
     DashboardPage dashboardPage;
